@@ -16,7 +16,7 @@
 
 /* Dark theme gradients */
 .bg-gradient-dark {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
@@ -100,7 +100,7 @@
 
 /* Custom Block Cursor */
 .cursor-block {
-  background-color: var(--accent-primary); /* Ensure --accent-primary is defined */
+  /* Ensure --accent-primary is defined */
   pointer-events: none; /* Make cursor ignore pointer events */
   z-index: 10; /* Ensure cursor is above the mirror span */
   animation: blink 1s step-start infinite;
@@ -183,3 +183,25 @@
 }
 
 */
+
+/* Custom bounce animation with a slower speed */
+/* Custom floating animation with a slower speed, upward bounce, and left-right movement */
+/* Custom floating animation with small movements on all sides */
+@keyframes custom-bounce {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-2%, -5%);
+  }
+  50% {
+    transform: translate(0, -10%);
+  }
+  75% {
+    transform: translate(2%, -5%);
+  }
+}
+
+.custom-bounce {
+  animation: custom-bounce 15s infinite ease-in-out;
+}

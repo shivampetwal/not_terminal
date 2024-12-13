@@ -44,7 +44,7 @@ export default function Terminal() {
   const positionStart = useRef({ x: 100, y: 100 });
 
   const [position, setPosition] = useState({ x: 100, y: 100 });
-  const [size, setSize] = useState({ width: 800, height: 600 });
+  const [size, setSize] = useState({ width: 900, height: 600 });
 
   // State for Settings Dropdown
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -234,7 +234,8 @@ export default function Terminal() {
 
   return (
     <div
-      className="flex items-center justify-center font-mono"
+    className="flex items-center justify-center font-mono custom-bounce"
+
       style={{
         position: 'fixed',
         top: `${position.y}px`,
